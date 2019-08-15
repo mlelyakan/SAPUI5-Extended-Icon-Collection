@@ -1,0 +1,6 @@
+<View displayBlock="true" controllerName="SapUI5Tutorial.RootApp"
+    xmlns="sap.m" height="100%">
+    <Shell>
+        <App id="masterAppView"/>
+    </Shell>
+</View>

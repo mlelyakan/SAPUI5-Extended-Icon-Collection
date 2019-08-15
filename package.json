@@ -1,0 +1,12 @@
+{
+  "name": "SAPUI5_PRO",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Component.js",
+  "scripts": {
+    "start": "browser-sync start --server --files \"./\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

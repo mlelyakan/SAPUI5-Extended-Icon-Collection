@@ -1,0 +1,118 @@
+/* @font-face {
+    font-family: 'fontawesome-normal';
+    src: url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.woff2") format("woff");
+    font-weight: normal;
+    font-style: normal;
+} */
+
+*, *:focus, *:active {
+    outline: none !important;
+}
+
+@font-face {
+    font-family: 'fontawesome-regular';
+    src: url("/Resources/webfonts/fa-regular-400.woff2") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'fontawesome-brands';
+    src: url("/Resources/webfonts/fa-brands-400.woff2") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'fontawesome-solid';
+    src: url("/Resources/webfonts/fa-solid-900.woff2") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'lineicons';
+    src: url("/Resources/webfonts/simple-line-icons.woff2") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'icofont';
+    src: url("/Resources/webfonts/icofont.woff2") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+.list-style .item-style {
+    border: 1px dashed #cfcfcf !important;
+    padding: 10px;
+    border-radius: 10px;
+    transition: background 0.4s ease;
+    color: #195f84;
+}
+
+.list-style .item-style:hover .sapUiIcon {
+    animation: colorIconAnimation 1s linear 0s infinite;
+}
+
+.list-style .sapMLIB {
+    border: 0 !important;
+    background: transparent !important;
+}
+
+.list-style .item-style:hover {
+    background: #ececec !important;
+    border-color: transparent !important;
+}
+
+.list-style .item-style .sapMTitle {
+    color: #757575 !important;
+    font-size: 18px;
+    margin-top: 6px;
+}
+
+.list-style .sapMGrowingListTrigger {
+    border: 0 !important;
+}
+
+.search-filter-title * {
+    font-size: 18px !important;
+}
+
+@keyframes colorIconAnimation {
+    0% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+
+    30% {
+        -webkit-transform: scale3d(1.25, 0.75, 1);
+        transform: scale3d(1.25, 0.75, 1);
+    }
+
+    40% {
+        -webkit-transform: scale3d(0.75, 1.25, 1);
+        transform: scale3d(0.75, 1.25, 1);
+    }
+
+    50% {
+        -webkit-transform: scale3d(1.15, 0.85, 1);
+        transform: scale3d(1.15, 0.85, 1);
+    }
+
+    65% {
+        -webkit-transform: scale3d(0.95, 1.05, 1);
+        transform: scale3d(0.95, 1.05, 1);
+    }
+
+    75% {
+        -webkit-transform: scale3d(1.05, 0.95, 1);
+        transform: scale3d(1.05, 0.95, 1);
+    }
+
+    100% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}

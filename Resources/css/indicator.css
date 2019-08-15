@@ -1,0 +1,50 @@
+.sap-loading-indicator {
+    text-align: center;
+    border-radius: 3px;
+    background: #263c51;
+    display: table;
+}
+
+.sap-loading-indicator .content {
+   display: table-cell;
+   vertical-align: middle;
+}
+
+.sap-loading-indicator .title {
+    color: #ededed;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.sap-loading-indicator .sapMText {
+    color: #fd9850;
+    font-size: 90%;
+    text-align: justify !important;
+    margin-top: 5px;
+}
+
+.sap-loading-indicator .spinner {
+   margin:0;
+   padding: 0;
+   animation: spin 2s infinite linear;
+}
+
+.sap-loading-indicator .spinner::before {
+   content:"\eff5";
+   font-family: icofont;
+   font-size: 50px;
+   color:#fff;
+}
+
+@keyframes spin {
+   0% {
+       -webkit-transform: rotate(0);
+       transform: rotate(0);
+   }
+
+   100% {
+       -webkit-transform: rotate(360deg);
+       transform: rotate(360deg);
+   }
+}

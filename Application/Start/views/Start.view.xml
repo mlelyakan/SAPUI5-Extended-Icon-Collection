@@ -1,0 +1,133 @@
+<mvc:View controllerName="SapUI5Tutorial.Application.Start.controller.Start"
+   xmlns:mvc="sap.ui.core.mvc"
+   xmlns:core="sap.ui.core"
+   xmlns:l="sap.ui.layout"
+   xmlns:f="sap.f"
+   xmlns:tnt="sap.tnt"
+   xmlns:grid="sap.ui.layout.cssgrid"
+   xmlns:spinner="SapUI5Tutorial.Application.CustomComponents"
+   xmlns="sap.m" height="100%">
+   <Page title="Color and Icon Library" showHeader="false" backgroundDesign="Transparent" class="sapUiContentPadding">
+      <IconTabBar stretchContentHeight="true" backgroundDesign="Transparent" applyContentPadding="true" tabDensityMode="Compact">
+         <items>
+            <IconTabFilter text="Color Library">
+               <l:FixFlex>
+                  <l:fixContent>
+                     <Panel backgroundDesign="Transparent">
+                        <VBox>
+                           <VBox alignItems="Center">
+                              <ObjectStatus text="Select single or multiple color type" icon="sap-icon://touch" state="Information" class="sapUiTinyMarginBottom search-filter-title"/>
+                              <tnt:InfoLabel text="Color Count : {/ColorListCount}" displayOnly="true" colorScheme= "4" class="sapUiTinyMarginBottom"/>
+                           </VBox>
+                           <MultiComboBox selectionChange="onSelectColorType" width="100%" items="{
+                     				path: '/ColorCollection',
+                     				sorter: {
+                     					path: 'ColorDescription',
+                     					group: true
+                     				}
+                     			}">
+                              <core:Item key="{ColorKey}" text="{ColorName}" />
+                           </MultiComboBox>
+                        </VBox>
+                     </Panel>
+                  </l:fixContent>
+                  <l:flexContent>
+                     <ScrollContainer height="100%" width="100%" horizontal="true" vertical="true" focusable="false">
+                        <f:GridList id="colorList_Id" growing="true" growingScrollToLoad="true" items="{/ColorList}" class="list-style sapUiContentPadding">
+                           <f:customLayout>
+                              <grid:GridBoxLayout boxMinWidth="120px"/>
+                           </f:customLayout>
+                           <CustomListItem>
+                              <VBox alignItems="Center" justifyContent="Center" class="item-style">
+                                 <core:Icon src="sap-icon://rhombus-milestone-2" color="{hex}" size="45px" class="sapUiTinyMarginBottom"/>
+                                 <Label text="{color}" tooltip="{color}" design="Bold"/>
+                                 <Title text="{hex}"/>
+                              </VBox>
+                           </CustomListItem>
+                        </f:GridList>
+                     </ScrollContainer>
+                  </l:flexContent>
+               </l:FixFlex>
+            </IconTabFilter>
+            <IconTabFilter text="Icon Library">
+               <l:FixFlex>
+                  <l:fixContent>
+                     <Panel backgroundDesign="Transparent">
+                        <VBox>
+                           <VBox alignItems="Center">
+                              <ObjectStatus text="Search any icon with name" icon="sap-icon://search" state="Information" class="sapUiTinyMarginBottom search-filter-title"/>
+                              <tnt:InfoLabel text="Icon Count : {/IconListCount}" displayOnly="true" colorScheme= "4" class="sapUiTinyMarginBottom"/>
+                           </VBox>
+                           <FlexBox wrap="Wrap" width="100%" alignItems="Center" justifyContent="Center">
+                              <VBox width="100%">
+                                 <Input id="iconSearchInput_ID" width="100%" placeholder="Search any icon by name.." liveChange="onSearchFontIcon"/>
+                              </VBox>
+                              <SegmentedButton id="segmentedButtonsFont_ID" selectedKey="fontawesomeicons" selectionChange="onSelectFontIconFamily" class="sapUiTinyMarginTop">
+                                 <items>
+                                    <SegmentedButtonItem text="FontAwesome" key="fontawesomeicons" />
+                                    <SegmentedButtonItem text="Simple Line Icons" key="simplelineicons"/>
+                                    <SegmentedButtonItem text="Font Icons" key="fonticons"/>
+                                 </items>
+                              </SegmentedButton>
+                           </FlexBox>
+                        </VBox>
+                     </Panel>
+                  </l:fixContent>
+                  <l:flexContent>
+                     <NavContainer id="iconNavContainer_ID" width="100%" height="100%" class="sapUiNoMargin">
+                        <Page id="fontAwesomeIconsPage_ID" showHeader="false">
+                           <f:GridList id="fontAwesomeGridList_ID" growing="true" growingScrollToLoad="true" items="{/FontAwesomeIconList}" class="list-style sapUiContentPadding">
+                              <f:customLayout>
+                                 <grid:GridBoxLayout boxMinWidth="120px"/>
+                              </f:customLayout>
+                              <CustomListItem>
+                                 <VBox alignItems="Center" justifyContent="Center" class="item-style">
+                                    <core:Icon src="{src}" size="42px" color="#454545" class="sapUiTinyMarginBottom"/>
+                                    <Label text="{name}" tooltip="{name}" design="Bold"/>
+                                    <Label text="unicode: {unicode}"/>
+                                 </VBox>
+                              </CustomListItem>
+                           </f:GridList>
+                        </Page>
+                        <Page id="simpleLineIconsPage_ID" showHeader="false">
+                           <f:GridList id="simpleLineIconGridList_ID" growing="true" growingScrollToLoad="true" items="{/SimpleLineIconList}" class="list-style sapUiContentPadding">
+                              <f:customLayout>
+                                 <grid:GridBoxLayout boxMinWidth="120px"/>
+                              </f:customLayout>
+                              <CustomListItem>
+                                 <VBox alignItems="Center" justifyContent="Center" class="item-style">
+                                    <core:Icon src="{src}" size="42px" color="#454545" class="sapUiTinyMarginBottom"/>
+                                    <Label text="{name}" tooltip="{name}" design="Bold"/>
+                                    <Label text="unicode: {unicode}"/>
+                                 </VBox>
+                              </CustomListItem>
+                           </f:GridList>
+                        </Page>
+                        <Page id="fontIconsPage_ID" showHeader="false">
+                           <f:GridList id="fontIconGridList_ID" growing="true" growingScrollToLoad="true" items="{/FontIconList}" class="list-style sapUiContentPadding">
+                              <f:customLayout>
+                                 <grid:GridBoxLayout boxMinWidth="120px"/>
+                              </f:customLayout>
+                              <CustomListItem>
+                                 <VBox alignItems="Center" justifyContent="Center" class="item-style">
+                                    <core:Icon src="{src}" size="42px" color="#454545" class="sapUiTinyMarginBottom"/>
+                                    <Label text="{name}" tooltip="{name}" design="Bold"/>
+                                    <Label text="unicode: {unicode}"/>
+                                 </VBox>
+                              </CustomListItem>
+                           </f:GridList>
+                        </Page>
+                     </NavContainer>
+                  </l:flexContent>
+               </l:FixFlex>
+            </IconTabFilter>
+            <IconTabFilter text="Icon Testing">
+               <!-- <spinner:LoadingIndicator title="Yükleniyor">
+                  <Text text="We could also do this with more HTML in the renderer but this is the simplest way and it will only be applied inside our custom control. However, please be aware that the custom control is in your app and might have to be adjusted when the inner controls change in future versions of SAPUI5." maxLines="3"/>
+                  <core:Icon src="sap-icon://icofont/icofont-spinner-alt-2" size="50px" color="#2a2a2a" press="onPressToggleButton" class="sap-spinner"/>
+               </spinner:LoadingIndicator> -->
+            </IconTabFilter>
+         </items>
+      </IconTabBar>
+   </Page>
+</mvc:View>

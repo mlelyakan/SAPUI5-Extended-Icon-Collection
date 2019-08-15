@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+    <meta charset="utf-8">
+    <title>SapUI5 Tutorial</title>
+    <link rel="stylesheet" href="./Resources/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="/Library/Datasets/Colors.js"></script>
+    <script src="/Library/Datasets/FontAwesomeIcons.js"></script>
+    <script src="/Library/Datasets/SimpleLineIcons.js"></script>
+    <script src="/Library/Datasets/FontIcons.js"></script>
+    <script id="sap-ui-bootstrap" src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js"
+        data-sap-ui-theme="sap_belize" data-sap-ui-bindingsyntax="complex" data-sap-ui-compatversion="edge"
+        data-sap-ui-resourceroots='{
+            "SapUI5Tutorial": "./"
+         }'></script>
+    <script>
+        sap.ui.getCore().attachInit(function () {
+            new sap.ui.core.ComponentContainer({
+                name: "SapUI5Tutorial",
+                height: "100%"
+            }).placeAt("content");
+        });
+        var oModel = new sap.ui.model.json.JSONModel;
+        oModel.setSizeLimit(5000);
+        sap.ui.getCore().setModel(oModel);
+    </script>
+</head>
+
+<body class="sapUiBody sapUiSizeCompact" id="content">
+</body>
+
+</html>
