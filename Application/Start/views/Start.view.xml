@@ -5,7 +5,6 @@
    xmlns:f="sap.f"
    xmlns:tnt="sap.tnt"
    xmlns:grid="sap.ui.layout.cssgrid"
-   xmlns:spinner="SapUI5Tutorial.Application.CustomComponents"
    xmlns="sap.m" height="100%">
    <Page title="Color and Icon Library" showHeader="false" backgroundDesign="Transparent" class="sapUiContentPadding">
       <IconTabBar stretchContentHeight="true" backgroundDesign="Transparent" applyContentPadding="true" tabDensityMode="Compact">
