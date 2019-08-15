@@ -33,7 +33,7 @@
                   </l:fixContent>
                   <l:flexContent>
                      <ScrollContainer height="100%" width="100%" horizontal="true" vertical="true" focusable="false">
-                        <f:GridList id="colorList_Id" growing="true" growingScrollToLoad="true" items="{/ColorList}" class="list-style sapUiContentPadding">
+                        <f:GridList id="colorList_Id" items="{/ColorList}" class="list-style sapUiContentPadding">
                            <f:customLayout>
                               <grid:GridBoxLayout boxMinWidth="120px"/>
                            </f:customLayout>
@@ -76,7 +76,7 @@
                   <l:flexContent>
                      <NavContainer id="iconNavContainer_ID" width="100%" height="100%" class="sapUiNoMargin">
                         <Page id="fontAwesomeIconsPage_ID" showHeader="false">
-                           <f:GridList id="fontAwesomeGridList_ID" growing="true" growingScrollToLoad="true" items="{/FontAwesomeIconList}" class="list-style sapUiContentPadding">
+                           <f:GridList id="fontAwesomeGridList_ID" items="{/FontAwesomeIconList}" class="list-style sapUiContentPadding">
                               <f:customLayout>
                                  <grid:GridBoxLayout boxMinWidth="120px"/>
                               </f:customLayout>
@@ -90,7 +90,7 @@
                            </f:GridList>
                         </Page>
                         <Page id="simpleLineIconsPage_ID" showHeader="false">
-                           <f:GridList id="simpleLineIconGridList_ID" growing="true" growingScrollToLoad="true" items="{/SimpleLineIconList}" class="list-style sapUiContentPadding">
+                           <f:GridList id="simpleLineIconGridList_ID" items="{/SimpleLineIconList}" class="list-style sapUiContentPadding">
                               <f:customLayout>
                                  <grid:GridBoxLayout boxMinWidth="120px"/>
                               </f:customLayout>
@@ -104,7 +104,7 @@
                            </f:GridList>
                         </Page>
                         <Page id="fontIconsPage_ID" showHeader="false">
-                           <f:GridList id="fontIconGridList_ID" growing="true" growingScrollToLoad="true" items="{/FontIconList}" class="list-style sapUiContentPadding">
+                           <f:GridList id="fontIconGridList_ID" items="{/FontIconList}" class="list-style sapUiContentPadding">
                               <f:customLayout>
                                  <grid:GridBoxLayout boxMinWidth="120px"/>
                               </f:customLayout>
@@ -120,12 +120,6 @@
                      </NavContainer>
                   </l:flexContent>
                </l:FixFlex>
-            </IconTabFilter>
-            <IconTabFilter text="Icon Testing">
-               <!-- <spinner:LoadingIndicator title="Yükleniyor">
-                  <Text text="We could also do this with more HTML in the renderer but this is the simplest way and it will only be applied inside our custom control. However, please be aware that the custom control is in your app and might have to be adjusted when the inner controls change in future versions of SAPUI5." maxLines="3"/>
-                  <core:Icon src="sap-icon://icofont/icofont-spinner-alt-2" size="50px" color="#2a2a2a" press="onPressToggleButton" class="sap-spinner"/>
-               </spinner:LoadingIndicator> -->
             </IconTabFilter>
          </items>
       </IconTabBar>

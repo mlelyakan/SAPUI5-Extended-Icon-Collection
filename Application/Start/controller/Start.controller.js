@@ -2,7 +2,6 @@ sap.ui.define([
    "sap/ui/core/mvc/Controller",
    "sap/ui/model/Filter",
    "sap/ui/model/FilterOperator",
-   "SapUI5Tutorial/Application/CustomComponents/LoadingIndicator"
 ], function (Controller, Filter, FilterOperator, LoadingIndicator) {
    "use strict";
    var base;
@@ -10,15 +9,6 @@ sap.ui.define([
       onInit: function () {
          base = this;
          base.getView().setModel(oModel);
-         // var indicator = new LoadingIndicator({
-         //    title: "Yükleniyor",
-         //    content: [
-         //       new sap.m.Text({
-         //          text:"It is a very obvious scenario that for customer applications, the standard Fiori controls sometime do not provide the required features"
-         //       })
-         //    ]
-         // });
-         // indicator.showIndicator();
       },
       onSelectColorType: function (oEvent) {
          var allColorFilters = [];
